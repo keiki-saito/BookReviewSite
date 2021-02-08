@@ -1,7 +1,9 @@
 @section('footer')
-<footer class="footer">
-    <div class="container">
-    <p class="text-center text-muted">フッター</p>
-    </div>
+<footer class="bg-light text-center" id="footer">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2021 Copyright: SaitoKeiki.com
+  </div>
+  <!-- Copyright -->
 </footer>
 @endsection

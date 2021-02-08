@@ -12,12 +12,18 @@
 */
 
 
+
 Route::get('/','BooksController@index')->name('book.index');
-Route::resource('book', 'BooksController', ['only' => [ 'show', 'create', 'store','edit','update','destroy']]);
-Route::get('/users/{user_id}', 'UsersController@show');
+
+Route::resource('user', 'UsersController', ['only' => [ 'show', 'edit','update']]);
 Route::resource('review','ReviewsController',['only'=>['store']]);
 Route::resource('bookmark','BookMarksController',['only'=>['store','destroy']]);
 
 Auth::routes();
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('book/{book}','BooksController@show')->name('book.show');
+});
+
 
 

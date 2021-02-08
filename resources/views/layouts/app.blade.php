@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./footerFixed.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,13 +22,28 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-   @yield('header')
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+<div>
+    @yield('header')
+</div>
+
+<div>
+    @yield('content')
+
+</div>
+
+
+
 
     @yield('footer')
+
+
+
+
+
+
+
+
 </body>
 
 </html>

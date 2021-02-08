@@ -14,6 +14,41 @@ $fa-font-path: "../webfonts"; //追記
 @import "index";
 @import "show";
 
+body{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+footer{
+    margin-top: auto;
+}
+
+
+
+.navbar-brand{
+    margin-left: 80px;
+}
+
+
+.my-navbar-item{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 25px;
+    margin:20px ;
+}
+
+.my-navbar-item:hover{
+    color: black;
+
+}
+
+
+
 
 
 

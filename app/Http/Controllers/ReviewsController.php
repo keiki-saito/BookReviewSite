@@ -13,6 +13,7 @@ class ReviewsController extends Controller
         $review = new Review;
         $review->review = $request->review;
         $review->star=$request->star;
+        //dd($request->star);
         $review->book_id = $request->book_id;
         $review->user_id = Auth::user()->id;
         $review->save();

@@ -1,3 +1,38 @@
 .card-title{
     font-size: 15px;
 }
+
+.book-card:hover{
+    box-shadow: 0 5px 10px black;
+    transform: translate(0, -5px);
+}
+
+.button {
+    display       : inline-block;
+    border-radius : 12%;          /* 角丸       */
+    font-size     : 13pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : #F7C305;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    border        : 2px solid #F7C305;    /* 枠の指定 */
+}
+  .button:hover {
+    color         : #F7C305;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+  }
+
+  .search{
+        font: 15px/24px sans-serif;
+        box-sizing: border-box;
+        width: 300px;
+        margin: 8px 0;
+        padding: 0.3em;
+        transition: 0.3s;
+        border: 1px solid #cecece;
+        border-radius: 4px;
+        outline: none;
+  }
