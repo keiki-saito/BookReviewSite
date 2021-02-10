@@ -36,7 +36,6 @@ class Book extends Model
         return $query->where('title','like',"%{$searchWord}%");
     }
 
-    
 
     public function bookmark_by()
     {

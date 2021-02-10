@@ -7,6 +7,7 @@
     {{session('reviewstatus')}}
 </div>
 @endif
+
 <div class="mt-4">
     <div class="container">
         <div class="row">
@@ -45,6 +46,7 @@
                         <p class="card-text">
                             {{$review->review}}
                             {{$review->star}}
+
                             @if(Auth::id()==$review->user->id)
                                 削除
                                 編集
@@ -69,13 +71,19 @@
                         <label for="review"></label>
                         <textarea name="review" id="review" class="form-control" rows="7"></textarea>
                     </div>
+
                     <div class="form-group">
+                        <p name="star" id="star"></p>
+                    </div>
+
+                    <!-- <div class="form-group">
                         <select id="star" name="star">
                             @foreach(config('star') as $key => $score)
                             <option value="{{ $key }}">{{ $score }}</option>
                             @endforeach
+
                         </select>
-                    </div>
+                    </div> -->
 
                     <div class="mt-4">
                         <button type="submit" class="btn btn-primary">
@@ -113,15 +121,23 @@
                 @endif
 
 
-
-
-
             </div>
 
 
         </div>
 
+
+
     </div>
+    <script>
+    $('#star').raty({
+       size: 36,
+       starOff: "{{ asset('storage/images/star-off.png') }}",
+       starOn: "{{ asset('storage/images/star-on.png') }}",
+
+     });
+    </script>
 </div>
 @endsection
+
 @include('layouts.footer')

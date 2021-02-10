@@ -10,9 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script type="text/javascript" src="./jquery.min.js"></script>
-    <script type="text/javascript" src="./footerFixed.js"></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -31,17 +29,20 @@
     @yield('content')
 
 </div>
-
-
-
-
-    @yield('footer')
+@yield('footer')
 
 
 
 
 
 
+<script>
+    $('#star01').raty({
+       size: 36,
+       starOff: "{{ asset('storage/images/star-off.png') }}",
+       starOn: "{{ asset('storage/images/star-on.png') }}",
+     });
+</script>
 
 
 </body>

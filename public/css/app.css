@@ -17119,6 +17119,7 @@ readers do not read off random characters that represent icons */
   /* なめらか変化 */
   border: 2px solid #F7C305;
   /* 枠の指定 */
+  text-decoration: none;
 }
 
 .button:hover {
@@ -17126,6 +17127,7 @@ readers do not read off random characters that represent icons */
   /* 背景色     */
   background: #ffffff;
   /* 文字色     */
+  text-decoration: none;
 }
 
 .search {
@@ -17138,6 +17140,14 @@ readers do not read off random characters that represent icons */
   border: 1px solid #cecece;
   border-radius: 4px;
   outline: none;
+}
+
+.mypage_link {
+  text-decoration: none;
+}
+
+.mypage_link:hover {
+  text-decoration: none;
 }
 
 blockquote {

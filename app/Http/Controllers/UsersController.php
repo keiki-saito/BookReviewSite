@@ -49,19 +49,19 @@ class UsersController extends Controller
             $fileData = file_get_contents($imageFile->getRealPath());
 
             //拡張子ごとに base64エンコード実施
-            if ($extension = 'jpg') {
+            if ($extension == 'jpg') {
                 $data_url = 'data:image/jpg;base64,'. base64_encode($fileData);
             }
 
-            if ($extension = 'jpeg') {
+            if ($extension == 'jpeg') {
                 $data_url = 'data:image/jpg;base64,'. base64_encode($fileData);
             }
 
-            if ($extension = 'png') {
+            if ($extension == 'png') {
                 $data_url = 'data:image/png;base64,'. base64_encode($fileData);
             }
 
-            if ($extension = 'gif') {
+            if ($extension == 'gif') {
                 $data_url = 'data:image/gif;base64,'. base64_encode($fileData);
             }
 

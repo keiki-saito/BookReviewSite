@@ -8,6 +8,9 @@
     <h1 class="display-4">BOOKON</h1>
 
     <p class="lead">〜本屋大賞限定レビューサイト〜</p>
+   
+　    <star-rating v-model="rating"></star-rating>
+    </div>
 
 </div>
 <div class="mt-4">
@@ -55,7 +58,9 @@
         @endforeach
 
     </div>
-</div>
+    <button id="test_jquery">ぽちっとな</button>
+
 @endsection
 
 @include('layouts.footer')
+

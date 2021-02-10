@@ -10,9 +10,11 @@ class ReviewsController extends Controller
 {
     public function store(Request $request)
     {
+        
         $review = new Review;
         $review->review = $request->review;
-        $review->star=$request->star;
+        $review->star=$request->score;
+
         //dd($request->star);
         $review->book_id = $request->book_id;
         $review->user_id = Auth::user()->id;

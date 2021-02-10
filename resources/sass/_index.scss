@@ -19,10 +19,12 @@
     line-height   : 1em;         /* 1行の高さ  */
     transition    : .3s;         /* なめらか変化 */
     border        : 2px solid #F7C305;    /* 枠の指定 */
+    text-decoration: none;
 }
   .button:hover {
     color         : #F7C305;     /* 背景色     */
-    background    : #ffffff;     /* 文字色     */
+    background    : #ffffff;    /* 文字色     */
+    text-decoration: none;
   }
 
   .search{
@@ -35,4 +37,11 @@
         border: 1px solid #cecece;
         border-radius: 4px;
         outline: none;
+  }
+
+  .mypage_link{
+    text-decoration: none;
+  }
+  .mypage_link:hover{
+    text-decoration: none;
   }

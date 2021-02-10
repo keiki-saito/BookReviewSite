@@ -37,7 +37,6 @@
         <div class="mt-5 col-2">
             <div class="card">
                 <img src="{{ asset('storage/images/' . $book->book_img) }}" width="100%" height="210">
-
             </div>
         </div>
         @endif

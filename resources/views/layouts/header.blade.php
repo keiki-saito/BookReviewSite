@@ -3,7 +3,7 @@
     <a class="my-0 mr-md-auto font-weight-normal" href="/"><img src="{{asset('storage/images/logo_transparent.png')}}" width="90px" height="90px"></a>
     <nav class="my-2 my-md-0 mr-md-3">
     @if(Auth::check())
-        <a class="p-2 text-dark"  href="/user/{{Auth::user()->id}}">マイページへ</a>
+        <a class="p-2 text-dark mypage_link"  href="/user/{{Auth::user()->id}}">マイページへ</a>
         @endif
     </nav>
     @if(Auth::check())
