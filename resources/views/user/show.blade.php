@@ -8,7 +8,7 @@
             <div class="card mb-3 " style="width: 800px; height:200px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img class="round-img ml-4 mt-4" src="{{ asset('storage/images/' . $user->profile_img) }}" />
+                        <img class="round-img ml-4 mt-4" src="{{ asset('/images/' . $user->profile_img) }}" />
                     </div>
                     <div class="col-md-8">
                         <div class="card-title">
@@ -34,7 +34,7 @@
         @foreach($bookmarks as $bookmark)
         <div class="mt-5 col-2 " style="margin-bottom:30px;">
             <div class="card">
-            <a href="/book/{{$bookmark->book->id}}"><img src="{{ asset('storage/images/' . $bookmark->book->book_img) }}" width="100%" height="200"></a>
+            <a href="/book/{{$bookmark->book->id}}"><img src="{{ asset('/images/' . $bookmark->book->book_img) }}" width="100%" height="200"></a>
             </div>
         </div>
         @endforeach
