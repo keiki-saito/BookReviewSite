@@ -117,10 +117,10 @@ class RegisterController extends Controller
 
 
       //s3アップロード開始
-            $image = $data('image');
+         $image = $data('image');
       // バケットの`myprefix`フォルダへアップロード
          $path = Storage::disk('s3')->putFile('/', $image, 'public');
-    
+
 
 
 
@@ -131,7 +131,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile'=>$data['profile'],
-            'profile_img'=> Storage::disk('s3')->url($path),
+            'profile_img'=> $data['image'],
         ]);
 
     }
