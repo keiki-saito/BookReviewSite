@@ -41,7 +41,7 @@
                 <!-- レビュー一覧 -->
                 @foreach($reviews as $review)
                 <div class="card mb-3">
-                    <h5 class="card-header"><img class="round-img" src="{{asset('storage/images/' . $review->user->profile_img)}}" style="height: 55px; width:55px;"><span class="ml-3">{{$review->user->name}}</span></h5>
+                    <h5 class="card-header"><img class="round-img" src="{{asset('images/' . $review->user->profile_img)}}" style="height: 55px; width:55px;"><span class="ml-3">{{$review->user->name}}</span></h5>
                     <div class="card-body">
                         <p class="card-text">
                             {{$review->review}}
