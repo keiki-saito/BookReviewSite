@@ -47,7 +47,7 @@
         <div class="col-3 mt-4 mb-3">
             <div class="card book-card">
                 <!-- <img src="{{ asset('storage/images/' . $book->book_img) }}" width="100%" height="220"> -->
-                <img class="c-img" src="data:image/png;base64,{{ $book->book_img }}" alt="本画像" width="100%" height="220">
+                <img class="c-img" src="data:image/jpg;base64,{{ $book->book_img }}" alt="本画像" width="100%" height="220">
                 <div class="card-body">
                     <h5 class="card-title font-italic"><a href="/book/{{$book->id}}">{{$book->title}}</a></h5>
                     <p class="card-text">著者：{{$book->author}}</p>
@@ -59,7 +59,6 @@
         @endforeach
 
     </div>
-    <button id="test_jquery">ぽちっとな</button>
 
 @endsection
 
