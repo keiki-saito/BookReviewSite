@@ -9,7 +9,7 @@
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <!-- <img class="round-img ml-4 mt-4" src="{{ asset('/images/' . $user->profile_img) }}" /> -->
-                        <img src="{{$user->profile_img}}" alt="ユーザー画像" class="round-img ml-4 mt-4" style="height: 55px; width:55px;">
+                        <img src="{{$user->profile_img}}" alt="ユーザー画像" class="round-img ml-4 mt-4">
                     </div>
                     <div class="col-md-8">
                         <div class="card-title">
@@ -18,7 +18,7 @@
                         <div class="card-body">
                             <p class="card-text mt-4">{{$user->profile}}</p>
                             @if(Auth::id()==$user->id)
-                               <a href="/user/{{$user->id}}/edit"><i class="fas fa-user-edit"></i>編集</a>
+                               <a href="/user/{{$user->id}}/edit" class="button"><i class="fas fa-user-edit"></i>編集</a>
                             @endif
                         </div>
                     </div>
