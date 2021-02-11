@@ -8,7 +8,7 @@
     <h1 class="display-4">BOOKON</h1>
 
     <p class="lead">〜本屋大賞限定レビューサイト〜</p>
-   
+
 　    <star-rating v-model="rating"></star-rating>
     </div>
 
@@ -46,7 +46,8 @@
         @foreach ($books as $book)
         <div class="col-3 mt-4 mb-3">
             <div class="card book-card">
-                <img src="{{ asset('storage/images/' . $book->book_img) }}" width="100%" height="220">
+                <!-- <img src="{{ asset('storage/images/' . $book->book_img) }}" width="100%" height="220"> -->
+                <img class="c-img" src="data:image/png;base64,{{ $book->book_img }}" alt="本画像" width="100%" height="220">
                 <div class="card-body">
                     <h5 class="card-title font-italic"><a href="/book/{{$book->id}}">{{$book->title}}</a></h5>
                     <p class="card-text">著者：{{$book->author}}</p>
