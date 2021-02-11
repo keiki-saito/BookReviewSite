@@ -71,7 +71,7 @@ class RegisterController extends Controller
 
         //\Debugbar::addMessage($value);
         //dd($data);
-        if (!is_null($data['profile_img'])) {
+
             $imageFile = $data['profile_img'];
 
             //$imageFileからファイル名を取得(拡張子あり)
@@ -112,7 +112,7 @@ class RegisterController extends Controller
             //画像を横400px, 縦400pxにリサイズし保存
             $image->resize(400, 400)->save(storage_path() . '/app/public/images/' . $fileNameToStore);
             // ---ここまで追加---
-        }
+   
 
 
 
