@@ -133,8 +133,8 @@
     <script>
     $('#star').raty({
        size: 36,
-       starOff: "{{ asset('storage/images/star-off.png') }}",
-       starOn: "{{ asset('storage/images/star-on.png') }}",
+       starOff: "{{ asset('images/star-off.png') }}",
+       starOn: "{{ asset('images/star-on.png') }}",
 
      });
     </script>
