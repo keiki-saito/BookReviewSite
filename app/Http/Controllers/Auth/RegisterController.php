@@ -117,7 +117,7 @@ class RegisterController extends Controller
 
 
       //s3アップロード開始
-         $image = $data('profile_img');
+         $image = $data['profile_img'];
       // バケットの`myprefix`フォルダへアップロード
          $path = Storage::disk('s3')->putFile('/', $image, 'public');
 
