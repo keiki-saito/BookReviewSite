@@ -13,9 +13,12 @@ class UsersController extends Controller
     {
         $user = User::where('id', $user_id)
             ->firstOrFail();
-        $books=Book::all();
+         //追加
+        $bookmarks = BookMark::where('user_id', $user_id)->get();
+
+
          // テンプレート「user/show.blade.php」を表示します。
-        return view('user/show', compact('user','books'));
+        return view('user/show', compact('user','bookmarks'));
     }
 
     public function edit($id)

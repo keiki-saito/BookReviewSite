@@ -31,19 +31,19 @@
 <div class="container">
     <h2 class="text-center">ブックマーク</h2>
     <div class="row">
-        @foreach($user->bookmarks as $bookmark)
-        @foreach ($books as $book)
-        @if($book->id==$bookmark->book_id)
-        <div class="mt-5 col-2">
+        @foreach($bookmarks as $bookmark)
+        <div class="mt-5 col-2 " style="margin-bottom:30px;">
             <div class="card">
-                <img src="{{ asset('storage/images/' . $book->book_img) }}" width="100%" height="210">
+            <a href="/book/{{$bookmark->book->id}}"><img src="{{ asset('storage/images/' . $bookmark->book->book_img) }}" width="100%" height="200"></a>
             </div>
         </div>
-        @endif
         @endforeach
-        @endforeach
+
+
     </div>
+
 </div>
+
 
 
 
