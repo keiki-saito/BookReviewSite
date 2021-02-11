@@ -83,7 +83,7 @@ class UsersController extends Controller
 
 
       //s3アップロード開始
-             $image = $request->profile_img;
+           $image = $request->file('profile_img');
       // バケットの`myprefix`フォルダへアップロード
             $path = Storage::disk('s3')->putFile('/', $image, 'public');
       // アップロードした画像のフルパスを取得
@@ -93,7 +93,6 @@ class UsersController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->profile = $request->profile;
-
         $user->save();
 
         return redirect('/');
