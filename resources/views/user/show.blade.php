@@ -8,7 +8,8 @@
             <div class="card mb-3 " style="width: 800px; height:200px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img class="round-img ml-4 mt-4" src="{{ asset('/images/' . $user->profile_img) }}" />
+                        <!-- <img class="round-img ml-4 mt-4" src="{{ asset('/images/' . $user->profile_img) }}" /> -->
+                        <img src="$user->profile_img" alt="ユーザー画像" class="round-img ml-4 mt-4>
                     </div>
                     <div class="col-md-8">
                         <div class="card-title">

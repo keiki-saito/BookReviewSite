@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -110,12 +111,9 @@ class RegisterController extends Controller
             $image = Image::make($data_url);
 
             //画像を横400px, 縦400pxにリサイズし保存
-            $image->resize(400, 400)->save(storage_path() . '/app/public/images/' . $fileNameToStore);
+            // $image->resize(400, 400)->save(storage_path() . '/app/public/images/' . $fileNameToStore);
             // ---ここまで追加---
-   
-
-
-
+            $path =Storage::disk('s3')->putFile('/', $fileNameToStore, 'public');
 
 
 
@@ -124,7 +122,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile'=>$data['profile'],
-            'profile_img'=>$fileNameToStore,
+            'profile_img'=> Storage::disk('s3')->url($path),
         ]);
 
     }
