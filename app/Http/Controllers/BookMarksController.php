@@ -17,7 +17,7 @@ class BookMarksController extends Controller
         $bookmark->save();
 
 
-        return redirect()->route('book.show',[$request->book_id])->with('bookmarkstatus', 'ブックマーク完了です');
+        return redirect()->route('book.show',[$request->book_id])->with('flash_message', 'ブックマーク完了です');
     }
 
     public function destroy(Request $request, $id) {
@@ -25,6 +25,6 @@ class BookMarksController extends Controller
 
         $book->bookmarks()->delete();
 
-        return redirect()->route('book.show',[$request->book_id])->with('bookmarkstatus', 'ブックマーク削除です');
+        return redirect()->route('book.show',[$request->book_id])->with('flash_message', 'ブックマーク解除です');
     }
 }

@@ -17101,13 +17101,13 @@ readers do not read off random characters that represent icons */
   display: inline-block;
   border-radius: 12%;
   /* 角丸       */
-  font-size: 13pt;
+  font-size: 12pt;
   /* 文字サイズ */
   text-align: center;
   /* 文字位置   */
   cursor: pointer;
   /* カーソル   */
-  padding: 12px 12px;
+  padding: 11px 11px;
   /* 余白       */
   background: #F7C305;
   /* 背景色     */
@@ -17207,11 +17207,35 @@ blockquote cite {
   height: 120px;
 }
 
+.edit_delete {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fa-bookmark {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+}
+
+.marked {
+  color: #ffbe5d;
+}
+
+.no-marked {
+  color: #C0C0C0;
+}
+
 body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 footer {
@@ -17232,5 +17256,16 @@ footer {
 
 .my-navbar-item:hover {
   color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 

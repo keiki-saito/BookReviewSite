@@ -54,3 +54,24 @@ blockquote cite {
     width: 120px;
     height: 120px;
   }
+
+  .edit_delete{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+  .fa-bookmark{
+      position: absolute;
+      top: 4px;
+      right: 7px;
+  }
+
+  .marked{
+
+      color: #ffbe5d;
+  }
+
+  .no-marked{
+     color: #C0C0C0;
+  }

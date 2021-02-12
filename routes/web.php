@@ -16,7 +16,7 @@
 Route::get('/','BooksController@index')->name('book.index');
 
 Route::resource('user', 'UsersController', ['only' => [ 'show', 'edit','update']]);
-Route::resource('review','ReviewsController',['only'=>['store']]);
+Route::resource('review','ReviewsController',['only'=>['store','edit','update','destroy']]);
 Route::resource('bookmark','BookMarksController',['only'=>['store','destroy']]);
 
 Auth::routes();

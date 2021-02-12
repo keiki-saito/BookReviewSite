@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -36,13 +37,6 @@
 
 
 
-<script>
-    $('#star01').raty({
-       size: 36,
-       starOff: "{{ asset('storage/images/star-off.png') }}",
-       starOn: "{{ asset('storage/images/star-on.png') }}",
-     });
-</script>
 
 
 </body>

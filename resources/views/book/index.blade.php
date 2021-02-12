@@ -46,7 +46,7 @@
         @foreach ($books as $book)
         <div class="col-3 mt-4 mb-3">
             <div class="card book-card">
-                <img src="{{ asset('/images/' . $book->book_img) }}" width="100%" height="220">
+                <a href="/book/{{$book->id}}"><img src="{{ asset('/images/' . $book->book_img) }}" width="100%" height="220"></a>
                 <div class="card-body">
                     <h5 class="card-title font-italic"><a href="/book/{{$book->id}}">{{$book->title}}</a></h5>
                     <p class="card-text">著者：{{$book->author}}</p>
