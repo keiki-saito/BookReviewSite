@@ -28,3 +28,6 @@ php artisan make:model モデル名 -m
 ```
 php artisan migrate:refresh --seed
 
+### シードファイル作成
+php artisan make:seeder ファイル名
+
