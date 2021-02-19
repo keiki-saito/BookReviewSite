@@ -9,7 +9,7 @@
 
     <p class="lead">〜本屋大賞限定レビューサイト〜</p>
 
-　    <star-rating v-model="rating"></star-rating>
+    <star-rating v-model="rating"></star-rating>
     </div>
 
 </div>
@@ -58,8 +58,12 @@
 
 
         @endforeach
-
     </div>
+
+        <div>{{ $books->links('pagination::default') }}</div>
+
+</div>
+
 
 @endsection
 

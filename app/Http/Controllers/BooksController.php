@@ -18,7 +18,7 @@ class BooksController extends Controller
         $books=Book::orderBy('id')
         ->yearAt($year_id)
         ->searchTitle($searchWord)
-        ->get();
+        ->paginate(12);
 
         return view('book.index',compact('books','years','year_id','searchWord'));
     }

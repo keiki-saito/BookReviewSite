@@ -13,6 +13,7 @@ $fa-font-path: "../webfonts"; //追記
 @import '~@fortawesome/fontawesome-free/scss/brands'; //追記
 @import "index";
 @import "show";
+@import "pagination";
 
 body{
     background-color: #ffffff;
@@ -55,6 +56,7 @@ button{
     padding: 0;
     appearance: none;
 }
+
 
 
 
