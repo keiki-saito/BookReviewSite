@@ -28,9 +28,11 @@
                 <form class="form-horizontal find form-inline" action="{{route('book.index')}}" method="get" class="form-horizontal">
                     <div class="form-group">
                         <select id="year_id" name="year_id" class="custom-select">
+
                             @foreach($years as $id=>$year)
-                            <option value="{{$id}}">{{$year}}</option>
+                            <option value="{{$id}}" @foreach($books as $book) @if ( $book->year_id == $id) selected @endif @endforeach>{{$year}}</option>
                             @endforeach
+
                         </select>
                         <input type="submit" value="検索" class="ml-3 button">
                     </div>
@@ -48,7 +50,7 @@
             <div class="card book-card">
                 <a href="/book/{{$book->id}}"><img src="{{ asset('/images/' . $book->book_img) }}" width="100%" height="220"></a>
                 <div class="card-body">
-                    <h5 class="card-title font-italic"><a href="/book/{{$book->id}}">{{$book->title}}</a></h5>
+                    <!-- <h5 class="card-title font-italic"><a href="/book/{{$book->id}}">{{$book->title}}</a></h5> -->
                     <p class="card-text">著者：{{$book->author}}</p>
                 </div>
             </div>

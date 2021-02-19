@@ -19,7 +19,7 @@
 
     <div class="form-group">
         <label for="review"></label>
-        <textarea name="review" id="review" class="form-control" rows="7"></textarea>
+        <textarea name="review" id="review" class="form-control" rows="7">{{$review->review}}</textarea>
     </div>
 
     <div class="form-group">

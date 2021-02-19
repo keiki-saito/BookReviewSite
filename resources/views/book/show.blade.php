@@ -88,7 +88,7 @@
                     </h5>
                     <div class="card-body">
                         <p class="card-text">
-                            {{$review->review}}
+                        {!! nl2br(e($review->review)) !!}
                         </p>
 
 
