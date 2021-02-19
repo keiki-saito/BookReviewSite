@@ -16,23 +16,24 @@
 <div class="mt-4">
     <div class="container">
         <div class="row">
-            <form class="form-inline" action="{{route('book.index')}}" method="GET" width="400px">
-                <div class="form-group">
-                    <input type="text" name="searchWord" value="{{$searchWord}}" class="search" placeholder="Search">
-                    <input type="submit" value="検索" class="button ml-3">
+                <div class="ml-3">
+                <form class="form-inline" action="{{route('book.index')}}" method="GET" width="400px">
+                    <div class="form-group">
+                        <input type="text" name="searchWord" value="{{$searchWord}}" class="search" placeholder="Search">
+                        <input type="submit" value="検索" class="button ml-3">
+                    </div>
+                </form>
                 </div>
-            </form>
 
 
-            <div class="ml-5">
-                <form class="form-horizontal find form-inline" action="{{route('book.index')}}" method="get" class="form-horizontal">
+
+            <div class="ml-5 mt-1">
+                <form class="form-horizontal find form-inline" action="{{route('book.index')}}" method="get">
                     <div class="form-group">
                         <select id="year_id" name="year_id" class="custom-select">
-
                             @foreach($years as $id=>$year)
                             <option value="{{$id}}" @foreach($books as $book) @if ( $book->year_id == $id) selected @endif @endforeach>{{$year}}</option>
                             @endforeach
-
                         </select>
                         <input type="submit" value="検索" class="ml-3 button">
                     </div>
