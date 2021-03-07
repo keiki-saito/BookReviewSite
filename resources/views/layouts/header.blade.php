@@ -4,7 +4,7 @@
     <nav class="my-2 my-md-0 mr-md-3">
     @if(Auth::check())
         <a class="p-2 text-dark mypage_link"  href="/user/{{Auth::user()->id}}">マイページへ</a>
-        @endif
+    @endif
     </nav>
     @if(Auth::check())
     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="button">

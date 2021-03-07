@@ -65,7 +65,7 @@
                 <!-- レビュー一覧 -->
                 @foreach($reviews as $review)
                 <div class="card mb-3">
-                    <a href="/user/{{$review->user->id}}"">
+                    <a href="/user/{{$review->user->id}}">
                         <h5 class=" card-header"><img class="round-img" src="{{$review->user->profile_img}}" style="height: 55px; width:55px;"><span class="ml-3">{{$review->user->name}}</span>
                     </a>
                     @switch($review->star)
